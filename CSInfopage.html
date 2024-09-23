@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department - George Mason University</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* GMU color scheme */
+        h1, .navbar, footer {
+            background-color: #006633;
+            color: white;
+        }
+
+        /* Custom box styling for the heading */
+        .header-box {
+            border: 5px solid #006633;
+            padding: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Light gray background for body */
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* Custom styling class */
+        .gmu-highlight {
+            color: #FFCC33;
+            font-weight: bold;
+        }
+
+        /* Navbar customization */
+        .navbar a {
+            color: white;
+        }
+        .navbar a:hover {
+            color: #FFCC33;
+        }
+
+        /* Cards styling */
+        .card-header {
+            background-color: #006633;
+            color: white;
+        }
+
+        /* Button styling */
+        .btn-success {
+            background-color: #006633;
+            border-color: #006633;
+        }
+        .btn-success:hover {
+            background-color: #FFCC33;
+            color: black;
+            border-color: #FFCC33;
+        }
+
+        /* Scroll to Top Button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #006633;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            display: none;
+        }
+        #scrollTopBtn:hover {
+            background-color: #FFCC33;
+            color: black;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .footer-link:hover {
+            color: #FFCC33;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">GMU CS Dept</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#degrees">MS Degrees</a></li>
+                <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="#survey">Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="container mt-5">
+        <div class="header-box text-center">
+            <h1>Welcome to the CS Department</h1>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="mt-4">
+            <p>
+                The Computer Science (CS) Department at George Mason University is dedicated to advancing the frontiers of computer science and equipping students with the skills and knowledge needed to excel in a fast-paced technological world. Our department is recognized for its excellent faculty who are deeply involved in groundbreaking research areas such as artificial intelligence, machine learning, cybersecurity, data analytics, and software engineering.
+            </p>
+            <p>
+                Our programs are designed to meet the diverse needs of students, whether they are seeking to launch a career in technology or enhance their skills as professionals in the field. We offer undergraduate, master's, and doctoral programs, all of which focus on providing students with both theoretical knowledge and practical skills. Through partnerships with industry leaders and a focus on hands-on learning, students are well-prepared to enter the workforce or continue their education in advanced research. Learn more about our department by visiting our <a href="https://cs.gmu.edu/" target="_blank" class="gmu-highlight">official website</a>.
+            </p>
+        </section>
+
+        <!-- MS Degrees Section with Cards -->
+        <section id="degrees" class="mt-5">
+            <h2>Available MS Degrees</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">MS in Computer Science</div>
+                        <div class="card-body">
+                            A program that covers core topics like algorithms, operating systems, and machine learning.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">MS in Information Security and Assurance</div>
+                        <div class="card-body">
+                            Focuses on the protection of data and systems through advanced cryptography and network security.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">MS in Data Analytics Engineering</div>
+                        <div class="card-body">
+                            Learn to analyze and interpret large datasets using machine learning and data mining techniques.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <div class="card-header">MS in Software Engineering</div>
+                        <div class="card-body">
+                            Prepares students to design, develop, and manage large-scale software systems.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <div class="card-header">MS in Information Systems</div>
+                        <div class="card-body">
+                            Combines technical and managerial skills to oversee information systems within organizations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Required Courses Section with Accordion -->
+        <section id="courses" class="mt-5">
+            <h2>Required Courses for MS Degrees</h2>
+            <div class="accordion" id="courseAccordion">
+                <!-- MS in Computer Science -->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                MS in Computer Science
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#courseAccordion">
+                        <div class="card-body">
+                            <ul>
+                                <li>CS 530: Fundamentals of Computer Science</li>
+                                <li>CS 531: Computer Systems and Fundamentals of Systems Programming</li>
+                                <li>CS 550: Operating Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MS in Information Security and Assurance -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                MS in Information Security and Assurance
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#courseAccordion">
+                        <div class="card-body">
+                            <ul>
+                                <li>ISA 562: Network Security</li>
+                                <li>ISA 656: Cryptography and Data Security</li>
+                                <li>ISA 673: Operating Systems Security</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MS in Data Analytics Engineering -->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                MS in Data Analytics Engineering
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#courseAccordion">
+                        <div class="card-body">
+                            <ul>
+                                <li>DAEN 500: Introduction to Data Analytics</li>
+                                <li>DAEN 651: Data Mining and Machine Learning</li>
+                                <li>DAEN 620: Big Data Processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Survey Section -->
+        <section id="survey" class="mt-5 text-center">
+            <h2>Take Our Survey</h2>
+            <p class="mt-4">Interested in sharing your thoughts? Take our CS Department Survey!</p>
+            <a href="survey.html" class="btn btn-success">Take Survey</a>
+        </section>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 George Mason University - CS Department</p>
+        <a href="https://cs.gmu.edu/" class="footer-link">Visit our official website</a>
+    </footer>
+
+    <!-- Bootstrap JS and Scroll to Top Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Scroll to Top Button Script
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollTopBtn").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
+
